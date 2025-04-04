@@ -1,0 +1,152 @@
+ /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0fdf4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.features img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    margin: 20px 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    color: #1b5e20;
+}
+
+.testimonial-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 0px solid #4CAF50;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #f0fdf4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    color: #2e7d32;
+}
+
+/* Product Offers Section */
+.products {
+    margin: 20px 0;
+}
+
+.products h2 {
+    text-align: center;
+    color: #1b5e20;
+}
+
+.product-item {
+    border: 1px solid #4CAF50;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #e8f5e9;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (min-width: 1024px) {
+    .products .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-item, .product-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-image {
+        margin-bottom: 10px;
+    }
+    .products .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .footer {
+        padding: 30px 0;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .testimonial-item, .product-item {
+        padding: 15px;
+    }
+    .products .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
